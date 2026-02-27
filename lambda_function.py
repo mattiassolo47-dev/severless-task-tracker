@@ -42,7 +42,7 @@ def lambda_handler(event, context):
             "body": json.dumps({"message": "task created", "task": item})
         }
 
-    # default: list tasks
+   
     response = table.scan()
     tasks = response.get("Items", [])
 
